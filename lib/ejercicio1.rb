@@ -1,10 +1,10 @@
 require 'active_support'
 require 'active_support/core_ext'
 # = ejercicio1.rb
-class Object
+module Element
   attr_accessor :elements
 
-  def biggest(*elements)
+  def self.biggest(*elements)
     return 0 if elements.blank?
     return 'Invalid' unless elements[0].respond_to?('length')
     biggest = elements
