@@ -5,7 +5,7 @@ describe Element do
     context 'element void' do
       let(:value) { '' }
 
-      it 'return cero' do
+      it 'return zero' do
         expect(subject).to eq('')
       end
     end
