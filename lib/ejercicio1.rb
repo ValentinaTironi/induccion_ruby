@@ -1,19 +1,12 @@
-require 'active_support'
-require 'active_support/core_ext'
-# = ejercicio1.rb
 module Element
-  attr_accessor :elements
-
   def self.biggest(*elements)
-    return 0 if elements.blank?
-    return 'Invalid' unless elements[0].respond_to?('length')
     biggest = elements
     if elements.respond_to?('each')
-      biggest = elements[0]
+      biggest = elements.first
       elements.each do |param|
         param.length > biggest.length ? biggest = param : biggest
       end
     end
-    biggest.to_s
+    biggest
   end
 end

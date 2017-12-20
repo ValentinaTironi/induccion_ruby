@@ -1,33 +1,33 @@
-# spec/ejercicio1_spec.rb
-require_relative '/home/moove-it/induccion_ruby/induccion_ruby/lib/ejercicio1'
+require 'ejercicio1'
 describe Element do
   describe '.biggest' do
-    context 'element nil' do
-      it 'return zero' do
-        expect(Element.biggest).to eq(0)
-      end
-    end
-
+    subject { Element.biggest(*value) }
     context 'element void' do
+      let(:value) { '' }
+
       it 'retorna cero' do
-        expect(Element.biggest('')).to eq('')
+        expect(subject).to eq('')
       end
     end
     context 'one element' do
+      let(:value) { 'word' }
+
       it 'return element' do
-        expect(Element.biggest('word')).to eq('word')
+        expect(subject).to eq('word')
       end
     end
-
     context 'elements with the same length' do
+      let(:value) { ['one', 'two'] }
+
       it 'return the first element' do
-        expect(Element.biggest('one', 'two')).to eq('one')
+        expect(subject).to eq('one')
       end
     end
+    context 'element biggest' do
+      let(:value) { ['example', 'exam'] }
 
-    context 'numbers' do
-      it 'return Invalid' do
-        expect(Element.biggest(1)).to eq('Invalid')
+      it 'return the biggest element' do
+        expect(subject).to eq('example')
       end
     end
   end
