@@ -2,19 +2,20 @@ require_relative '../lib/ejercicio1'
 describe Element do
   describe '.biggest' do
     subject { Element.biggest(*value) }
-    context 'element void' do
+
+    context 'empty element' do
       let(:value) { '' }
 
-      it 'return zero' do
+      it 'return empty' do
         expect(subject).to eq('')
       end
     end
 
     context 'one element' do
-      let(:value) { 'word' }
+      let(:value) { 'value' }
 
       it 'return element' do
-        expect(subject).to eq('word')
+        expect(subject).to eq('value')
       end
     end
 
