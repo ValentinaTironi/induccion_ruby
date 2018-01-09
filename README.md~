@@ -1,0 +1,23 @@
+# induccion_ruby
+
+# Author: Valentina Tironi
+
+# EXERCISE 1
+
+#== Exercise objectives
+# Implement method that receives objects that
+# respond to the +length+ method, and return the
+# object that has the largest length value.
+# In case there's more than one object with the largest length value,
+# it has to return the first element received.
+
+# === Class object
+
+# Definition class_object
+# * method biggest
+
+# Methods
+#   * biggest
+#	      Receive by parameters the elements with which the method has to work
+#      See if the elements respond to + length +
+#      If it does, look for the object with more character
